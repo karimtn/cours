@@ -1,0 +1,50 @@
+<mat-toolbar color="primary" class="nav-bar">
+  
+  <!-- Button to open the Side Menu -->
+  <button mat-button (click)="sidenav.toggle()" class="menu-btn">
+    <mat-icon>menu</mat-icon>
+  </button>
+  
+  <span class="spacer"></span>
+  
+  <!-- App title -->
+  <span>Dashboard</span>
+  <span class="example-fill-remaining-space"></span>
+  <button mat-icon-button routerLink="/profile"><mat-icon>face</mat-icon></button>
+  <span><button (click)="logout()" mat-button>Logout</button>  </span>
+</mat-toolbar>
+<!-- Navbar ends -->
+
+<!-- Side Menu and Content -->
+<mat-sidenav-container>
+  
+  <!-- Side Menu starts -->
+  <mat-sidenav #sidenav mode="side" opened="true">
+    
+    <div class="sidenav-inner-wrapper">
+
+      <!-- Side menu items starts -->
+      <p class="sidenav-item">
+        <mat-icon class="sidenav-icon">people</mat-icon>
+        <a class="sidenav-link" routerLink="/users">Users</a>
+      </p>
+
+      <p class="sidenav-item">
+        <mat-icon class="sidenav-icon">book</mat-icon>
+        <a class="sidenav-link" routerLink="/courses">Courses</a>
+      </p>
+      <!-- Side menu items ends -->
+
+    </div>
+    
+  </mat-sidenav>
+  <!-- Side Menu ends -->
+<mat-sidenav-content>
+    <div class="content">
+      <ng-content></ng-content>
+    </div>
+                  <!-- Content ends -->
+</mat-sidenav-content>
+<!-- Side Menu and Content -->
+<!-- Content starts -->
+</mat-sidenav-container>

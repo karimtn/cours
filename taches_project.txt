@@ -1,0 +1,36 @@
+Taches:
+
+#0 - DB 
+
+USER :
+email, nickname , lastname, name, tel, pass, profile pic , access ( if 0 simple user , if 1 admin )
+
+COURSE :
+title ,  pic , content :[ WYSWYG ] , category , social : {likes : count , comments : [ { user:'' , avatar:'' , date:'', comment:''}  ] , view : count  
+
+#1 - Auth 
+	#1.1 - register 
+	#1.2 - login
+
+#2 - Page courses List
+
+#3 - Course details 
+
+#4- courses details : Like , comments 
+
+#5 - Categories, Search page 
+
+- Related courses 
+
+- Menu Nav Bar
+
+- Contact as 
+
+- Dashboard Stats
+
+- Dashboard : Manage courses 
+
+- Dashboard : Manage comments 
+
+- Dashboard : Manage users 
+

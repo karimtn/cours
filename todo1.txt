@@ -1,0 +1,14 @@
+TODO 1 :
+********
+
+- add material 
+
+https://material.angular.io/guide/getting-started
+
+- Create login / register / home page with menu with users and cours 
+
+- Create users profile service ( crud )
+
+- create cours service ( crud )
+
+- create UI : cours List + users List
