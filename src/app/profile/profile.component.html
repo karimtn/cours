@@ -6,6 +6,11 @@
     <!--<img mat-card-avatar src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">-->
     <mat-card-content>
         <div mat-card-avatar class="example-header-image"></div>
+        <img src="{{user?.imgPath}}" name="preview" />
+          <button mat-icon-button>
+              <input type="file" (change)="handleFileInput($event.target.files)" name="file-to-upload" placeholder="Upload file">
+              <mat-icon aria-label="Example icon-button with a heart icon">file_upload</mat-icon>
+          </button>
         <br>
         <mat-card-subtitle>Name Lastname</mat-card-subtitle>
         <mat-card-subtitle>Email</mat-card-subtitle>

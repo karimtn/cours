@@ -11,6 +11,10 @@ import { tokenNotExpired, JwtHelper } from 'angular2-jwt';
 @Injectable()
 export class ApiService {
 
+  handleError(arg0: any): any {
+    throw new Error("Method not implemented.");
+  }
+  httpClient: any;
   jwtHelper: JwtHelper = new JwtHelper();
 
   constructor(private http: Http) { }
@@ -35,6 +39,20 @@ export class ApiService {
       .map(res => {
         return res.json();
       });
+  }
+
+  uploadFile(fileToUpload): Observable<boolean> {
+    const endpoint = 'http://localhost:3000/api/uploads';
+    const formData: FormData = new FormData();
+    formData.append('file-to-upload', fileToUpload, fileToUpload.name);
+    return this.http.post(endpoint, formData)
+      .map(res => { return res.json(); })
+    /*
+    return this.http.post('http://localhost:3000/api/uploads', data)
+    .map(res => {
+      return res.json();
+    });
+    */
   }
 
 }

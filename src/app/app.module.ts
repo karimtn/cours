@@ -15,6 +15,7 @@ import { AuthService } from './service/auth.service';
 import { HttpModule } from '@angular/http';
 import { MenuComponent } from './menu/menu.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ApiService } from './service/api.service';
 
 
 @NgModule({
@@ -37,7 +38,7 @@ import { ProfileComponent } from './profile/profile.component';
     HttpModule,
 
   ],
-  providers: [AuthService],
+  providers: [AuthService, ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
